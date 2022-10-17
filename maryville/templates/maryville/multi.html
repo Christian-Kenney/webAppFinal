@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en" xmlns:style="http://www.w3.org/1999/xhtml">
+<script src="{% static '/js/script.js' %}"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Addition</title>
+
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+
+    <style>
+
+
+    </style>
+</head>
+<body onload="generateMultiNums()" id="grad">
+<div class="mainDiv">
+    <div class="navButtons">
+        <button type="button" onclick="location.href='{% url 'sub' %}'" class="button button2">Subtraction</button>
+        <button type="button" onclick="location.href='{% url 'addition' %}'" class="button button3">Addition</button>
+        <button type="button" onclick="location.href='{% url 'divis' %}'" class="button button4">Division</button>
+    </div>
+
+
+    <div>
+        <h1><span id="num1"></span>  *  <span id="num2"></span></h1>
+    </div>
+
+
+    <div class="userArea">
+        <input type="text" id="userAnswer" class="userInput">
+        <button onclick="checkMultiAnswer()" class="button button1">Submit</button>
+    </div>
+
+    <div class="streakDiv">
+        <h1>Current Streak: <span id="streak"></span>
+        </h1>
+    </div>
+</div>
+
+
+</body>
+</html>
